@@ -8,14 +8,7 @@ import Skills from "../native/Skills";
 export default function WebExperience() {
   return (
     <ScrollView>
-      <MyHeader />
-      <Skills />
-      <PlainText
-        collection="content"
-        document="Intro-Skills"
-        prefix="aboutMe"
-      />
-      <HobbiesCard content="hobies" />
+
     </ScrollView>
   );
 }
