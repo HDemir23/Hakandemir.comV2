@@ -1,29 +1,60 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { GitHubDarkTheme } from "@/constants/theme";
+import { Ionicons } from "@expo/vector-icons";
+import { Stack } from "expo-router";
+import { Tabs } from "expo-router/tabs";
+import { Platform } from "react-native";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+  const style = GitHubDarkTheme;
 
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
+  if (Platform.OS !== "web") {
+    return (
+      <Tabs
+        screenOptions={{
+          tabBarStyle: {
+            backgroundColor: style.colors.background,
+          },
+          tabBarActiveTintColor: style.colors.buttonBackground,
+          tabBarInactiveTintColor: style.colors.buttonDisabledBackground,
+          headerStyle: {
+            backgroundColor: style.colors.background,
+          },
+          headerTitleStyle: {
+            color: style.colors.title,
+            fontWeight: "bold",
+          },
+        }}
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: "About",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="person" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="experience"
+          options={{
+            title: "Experience",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="briefcase" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="skills"
+          options={{
+            title: "Skills",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="code" size={size} color={color} />
+            ),
+          }}
+        />
+      </Tabs>
+    );
   }
 
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+  return <Stack screenOptions={{ headerShown: false }} />;
 }
