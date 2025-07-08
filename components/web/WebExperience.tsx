@@ -1,14 +1,13 @@
 import React from "react";
-import { ScrollView } from "react-native";
-import HobbiesCard from "../native/Card/HobbiesCard";
-import MyHeader from "../native/header/MyHeader";
-import PlainText from "../native/PlainText/PlainText";
-import Skills from "../native/Skills";
+import { Text, View } from "react-native";
+import { useWebLayoutstyle } from "./Pages.styles/webLayout.style";
 
 export default function WebExperience() {
-  return (
-    <ScrollView>
+  const style = useWebLayoutstyle();
 
-    </ScrollView>
+  return (
+    <View style={{ backgroundColor: "white" }}>
+      <Text>asdadadadadasdad</Text>
+    </View>
   );
 }

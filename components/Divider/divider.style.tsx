@@ -27,8 +27,7 @@ export const useDividerStyle = ({
       marginVertical,
       marginHorizontal,
       borderRadius: height / 2,
-      // shadow effect
-      shadowColor: theme.colors.shadow || "#000",
+      shadowColor: theme.colors.shadow,
       shadowOffset: {
         width: 0,
         height: 1,

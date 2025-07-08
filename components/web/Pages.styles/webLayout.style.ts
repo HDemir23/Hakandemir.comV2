@@ -25,7 +25,7 @@ export const useWebLayoutstyle = () => {
   const content: ViewStyle = useMemo(
     () => ({
       flex: 1,
-      width: isMedium ? "60%" : "100%",
+      width: isMedium ? "52%" : "100%",
       minHeight: height, // Content'in de minimum height'i olsun
     }),
     [theme, width, height, isMedium]
@@ -40,9 +40,18 @@ export const useWebLayoutstyle = () => {
     [width, height]
   );
 
+  const buttonContent: ViewStyle = useMemo(
+    () => ({
+      flexDirection: "row",
+      justifyContent: "space-evenly",
+    }),
+    []
+  );
+
   return {
     container,
     content,
     scrollContent,
+    buttonContent,
   };
 };

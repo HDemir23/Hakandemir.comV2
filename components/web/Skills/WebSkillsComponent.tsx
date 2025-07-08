@@ -6,9 +6,11 @@ import CssIcon from "@/assets/svg/Css";
 import ExpoIcon from "@/assets/svg/ExpoIcon";
 import FirebaseIcon from "@/assets/svg/FirebaseIcon";
 import GitIcon from "@/assets/svg/GitIcon";
+import HtmlIcon from "@/assets/svg/Html";
 import JavaScriptIcon from "@/assets/svg/JavaScript";
 import ReactIcon from "@/assets/svg/ReactIcon";
 import ReactNativeIcon from "@/assets/svg/ReactNative";
+import SwiftIcon from "@/assets/svg/Swift";
 import TypeScriptIcon from "@/assets/svg/TypeScript";
 
 type Skill = {
@@ -20,12 +22,14 @@ type Skill = {
 const skills: Skill[] = [
   { id: "1", name: "TypeScript", Icon: TypeScriptIcon },
   { id: "2", name: "JavaScript", Icon: JavaScriptIcon },
-  { id: "3", name: "React", Icon: ReactIcon },
-  { id: "4", name: "Css", Icon: CssIcon },
-  { id: "5", name: "Git", Icon: GitIcon },
-  { id: "6", name: "Firebase", Icon: FirebaseIcon },
-  { id: "7", name: "Expo", Icon: ExpoIcon },
-  { id: "8", name: "React Native", Icon: ReactNativeIcon },
+  { id: "3", name: "React Native", Icon: ReactNativeIcon },
+  { id: "4", name: "Expo", Icon: ExpoIcon },
+  { id: "5", name: "Css", Icon: CssIcon },
+  { id: "6", name: "Git", Icon: GitIcon },
+  { id: "7", name: "Firebase", Icon: FirebaseIcon },
+  { id: "8", name: "React", Icon: ReactIcon },
+  { id: "9", name: "Swift", Icon: SwiftIcon },
+  { id: "10", name: "HTML", Icon: HtmlIcon },
 ];
 
 export default function WebSkillsComponent() {

@@ -1,20 +1,18 @@
 import * as React from "react";
-import Svg, { Path } from "react-native-svg";
+import Svg, { G, Path, Rect } from "react-native-svg";
 const HtmlIcon = ({ size = 24 }: { size?: number }) => (
-  <Svg width={size} height={size} viewBox="0 0 128 128">
-    <Path
-      fill="#E44D26"
-      d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z"
-    />
-    <Path fill="#F16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z" />
-    <Path
-      fill="#EBEBEB"
-      d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z"
-    />
-    <Path
-      fill="#fff"
-      d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z"
-    />
+  <Svg width={size} height={size} viewBox="0 0 256 256">
+    <G fill="none">
+      <Rect width="256" height="256" fill="#E14E1D" rx="60" />
+      <Path
+        fill="#fff"
+        d="m48 38l8.61 96.593h110.71l-3.715 41.43l-35.646 9.638l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l65.51-18.172l8.783-98.061H85.824l-2.923-32.71h122.238L208 38z"
+      />
+      <Path
+        fill="#EBEBEB"
+        d="M128 38H48l8.61 96.593H128v-31.938H85.824l-2.923-32.71H128zm0 147.647l-.041.014l-35.579-9.624l-2.379-26.602H57.94l4.585 51.281l65.427 18.172l.049-.014z"
+      />
+    </G>
   </Svg>
 );
 export default HtmlIcon;
