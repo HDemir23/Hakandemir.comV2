@@ -9,7 +9,7 @@ import WebContact from "./WebContact";
 import WebExperience from "./WebExperience";
 import WebHome from "./WebHome";
 
-type ContentType = "home" | "experience" | "projects" | "contact";
+type ContentType = "home" | "experience" | "projects";
 
 const ContentComponents = {
   home: () => <WebHome />,
@@ -50,7 +50,7 @@ export default function WebLayout() {
       <GalaxyBackground numberOfRings={5} numberOfStars={100} />
       <View style={style.container}>
         <View style={style.content}>
-          <MyWebHeader />
+          <MyWebHeader activeContent={activeContent} />
           <Divider />
           <View style={style.buttonContent}>
             {buttonConfig.map((button, index) => (

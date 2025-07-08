@@ -22,6 +22,7 @@ export const useHeaderStyle = () => {
     }),
     [theme]
   );
+
   const content: ViewStyle = useMemo(
     () => ({
       flexDirection: "row",
@@ -36,8 +37,10 @@ export const useHeaderStyle = () => {
       width: isMobile ? 70 : 110,
       height: isMobile ? 70 : 110,
       borderRadius: 90,
+      // Smooth transition for image changes
+      transition: "all 0.3s ease",
     }),
-    [theme]
+    [isMobile]
   );
 
   const ImageBorder: ViewStyle = useMemo(
@@ -49,8 +52,10 @@ export const useHeaderStyle = () => {
       justifyContent: "center",
       alignItems: "center",
       marginVertical: 15,
+      // Smooth transition for border changes
+      transition: "all 0.3s ease",
     }),
-    [theme]
+    [theme, isMobile]
   );
 
   const Title: TextStyle = useMemo(
@@ -58,8 +63,10 @@ export const useHeaderStyle = () => {
       color: theme.colors.title,
       fontSize: isMobile ? 25 : 40,
       fontWeight: "bold",
+      // Smooth transition for text changes
+      transition: "color 0.3s ease",
     }),
-    [theme]
+    [theme, isMobile]
   );
 
   const Text: TextStyle = useMemo(
@@ -67,11 +74,12 @@ export const useHeaderStyle = () => {
       color: theme.colors.buttonBackground,
       fontSize: 14,
       fontWeight: "bold",
+      // Smooth transition for text changes
+      transition: "color 0.3s ease",
     }),
     [theme]
   );
 
-  const adsa: ViewStyle = useMemo(() => ({}), [theme]);
   return {
     container,
     content,
