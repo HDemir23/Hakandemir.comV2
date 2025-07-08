@@ -15,6 +15,8 @@ export const useWebLayoutstyle = () => {
   const container: ViewStyle = useMemo(
     () => ({
       flex: 1,
+      paddingTop: 20,
+      paddingBottom: 20,
       justifyContent: "center",
       alignItems: "center",
       minHeight: height, // Minimum height ekledim
@@ -25,7 +27,7 @@ export const useWebLayoutstyle = () => {
   const content: ViewStyle = useMemo(
     () => ({
       flex: 1,
-      width: isMedium ? "52%" : "100%",
+      width: isMedium ? "55%" : "100%",
       minHeight: height, // Content'in de minimum height'i olsun
     }),
     [theme, width, height, isMedium]

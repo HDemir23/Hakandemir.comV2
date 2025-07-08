@@ -14,6 +14,7 @@ export const useSkillsStyle = () => {
     () => ({
       padding: 16,
       width: "100%",
+      backgroundColor: "transparent",
     }),
     [theme]
   );

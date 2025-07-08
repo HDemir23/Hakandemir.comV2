@@ -1,11 +1,15 @@
 import React from "react";
 import { View } from "react-native";
-import WebSkillsComponent from "./Skills/WebSkillsComponent";
+import Divider from "../Divider/divider";
+import HobbiesCard from "./Card/HobbiesCard";
+import PlainText from "./PlainText/PlainText";
 
 export default function WebHome() {
   return (
-    <View>
-      <WebSkillsComponent />
+    <View style={{ flex: 1 }}>
+      <PlainText collection="content" document="Intro-text" prefix="aboutMe" />
+      <Divider />
+      <HobbiesCard title="Images" content="hobies" />
     </View>
   );
 }

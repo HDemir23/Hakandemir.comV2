@@ -47,7 +47,7 @@ export default function WebLayout() {
 
   return (
     <ScrollView style={style.scrollContent}>
-      <GalaxyBackground numberOfRings={5} numberOfStars={0} />
+      <GalaxyBackground numberOfRings={5} numberOfStars={100} />
       <View style={style.container}>
         <View style={style.content}>
           <MyWebHeader />

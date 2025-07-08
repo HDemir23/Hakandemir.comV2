@@ -53,6 +53,7 @@ export default function PlainText({
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>About</Text>
       <View style={styles.content}>
         {aboutMe.map((txt, idx) => (
           <View key={idx} style={styles.textContainer}>

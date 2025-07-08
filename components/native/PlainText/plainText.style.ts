@@ -11,7 +11,6 @@ export const usePlainText = () => {
       marginTop: 10,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: theme.colors.cardBackground,
       borderRadius: 25,
       marginLeft: 20,
       marginRight: 20,
@@ -26,12 +25,30 @@ export const usePlainText = () => {
     [theme]
   );
 
-  const Text: TextStyle = useMemo(
+  const textContainer: ViewStyle = useMemo(
+    () => ({
+      backgroundColor: `rgba(22, 27, 34, ${theme.transparency.high})`,
+      borderRadius: 12,
+      padding: 12,
+      marginVertical: 6,
+      borderLeftWidth: 3,
+      borderLeftColor: theme.colors.buttonBackground,
+      shadowColor: theme.colors.shadow,
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.3,
+      shadowRadius: 4,
+      elevation: 3,
+    }),
+    [theme]
+  );
+
+  const text: TextStyle = useMemo(
     () => ({
       color: theme.colors.text,
       fontSize: 16,
-      margin: 10,
-      
+      lineHeight: 22,
+      fontWeight: "400",
+      opacity: 0.8,
     }),
     [theme]
   );
@@ -40,6 +57,7 @@ export const usePlainText = () => {
   return {
     container,
     content,
-    Text,
+    text,
+    textContainer,
   };
 };
