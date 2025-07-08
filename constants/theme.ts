@@ -2,6 +2,11 @@ import { useMemo } from "react";
 import { ViewStyle } from "react-native";
 
 export const GitHubDarkTheme = {
+  transparency: {
+    low: 0.8,
+    medium: 0.5,
+    high: 0.2,
+  },
   colors: {
     // Typography
     title: "#C9D1D9", // Başlıklar

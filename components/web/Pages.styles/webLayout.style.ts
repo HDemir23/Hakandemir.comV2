@@ -7,7 +7,6 @@ export const useWebLayoutstyle = () => {
   const { width, height } = useWindowDimensions();
 
   // Responsive breakpoints
-
   const isMedium = width >= 524;
   const isLarge = width >= 768;
   const isTablet = width >= 768 && width < 1024;
@@ -18,24 +17,27 @@ export const useWebLayoutstyle = () => {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
+      minHeight: height, // Minimum height ekledim
     }),
-    [theme, width]
+    [theme, width, height]
   );
 
   const content: ViewStyle = useMemo(
     () => ({
       flex: 1,
       width: isMedium ? "60%" : "100%",
+      minHeight: height, // Content'in de minimum height'i olsun
     }),
-    [theme, width]
+    [theme, width, height, isMedium]
   );
 
   const scrollContent: ViewStyle = useMemo(
     () => ({
       flex: 1,
-      backgroundColor: theme.colors.background,
+      backgroundColor: "transparent", // Background'u transparent yaptım ki galaxy görünsün
+      minHeight: height,
     }),
-    [width]
+    [width, height]
   );
 
   return {

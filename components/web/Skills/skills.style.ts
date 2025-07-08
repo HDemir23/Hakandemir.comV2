@@ -12,7 +12,6 @@ export const useSkillsStyle = () => {
 
   const container: ViewStyle = useMemo(
     () => ({
-      backgroundColor: theme.colors.background,
       padding: 16,
       width: "100%",
     }),
@@ -61,11 +60,12 @@ export const useSkillsStyle = () => {
       alignItems: "center",
       padding: 12,
       backgroundColor: theme.colors.cardBackground,
+      opacity: theme.transparency.low,
       borderRadius: 12,
       marginBottom: 12,
       width: isMobile ? 150 : isTablet ? 160 : 180,
-      cursor: "pointer", // Web için cursor pointer
-      transition: "all 0.3s ease", // Smooth transition
+      cursor: "pointer",
+      transition: "all 0.3s ease",
     }),
     [theme, isMobile, isTablet]
   );
@@ -77,6 +77,7 @@ export const useSkillsStyle = () => {
       transform: [{ scale: 1.05 }],
       shadowColor: theme.colors.title,
       shadowOffset: { width: 0, height: 4 },
+      opacity: 1,
       shadowOpacity: 0.3,
       shadowRadius: 8,
       elevation: 8,
