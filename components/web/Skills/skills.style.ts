@@ -6,7 +6,6 @@ export const useSkillsStyle = () => {
   const theme = GitHubDarkTheme;
   const { width } = useWindowDimensions();
 
-  // Responsive breakpoints
   const isMobile = width < 768;
   const isTablet = width >= 768 && width < 1024;
   const isDesktop = width >= 1024;
@@ -23,14 +22,13 @@ export const useSkillsStyle = () => {
   const title: TextStyle = useMemo(
     () => ({
       color: theme.colors.title,
-      fontSize: isMobile ? 20 : 28,
+      fontSize: 20,
       fontWeight: "bold",
       marginBottom: 16,
     }),
     [theme]
   );
 
-  // New: Flex wrap container for tablet/desktop
   const skillsWrapper: ViewStyle = useMemo(
     () => ({
       flexDirection: "row",
@@ -61,22 +59,47 @@ export const useSkillsStyle = () => {
     () => ({
       flexDirection: "row",
       alignItems: "center",
-      justifyContent: "center",
       padding: 12,
       backgroundColor: theme.colors.cardBackground,
       borderRadius: 12,
       marginBottom: 12,
       width: isMobile ? 150 : isTablet ? 160 : 180,
+      cursor: "pointer", // Web için cursor pointer
+      transition: "all 0.3s ease", // Smooth transition
     }),
     [theme, isMobile, isTablet]
+  );
+
+  // Hover effect
+  const itemHovered: ViewStyle = useMemo(
+    () => ({
+      backgroundColor: theme.colors.border,
+      transform: [{ scale: 1.05 }],
+      shadowColor: theme.colors.title,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8,
+    }),
+    [theme]
   );
 
   const label: TextStyle = useMemo(
     () => ({
       color: theme.colors.text,
-      fontSize: isMobile ? 14 : 15,
+      fontSize: 14,
       fontWeight: "500",
       paddingLeft: 10,
+      transition: "color 0.3s ease",
+    }),
+    [theme]
+  );
+
+  // Hover label Color
+  const labelHovered: TextStyle = useMemo(
+    () => ({
+      color: theme.colors.title,
+      fontWeight: "600",
     }),
     [theme]
   );
@@ -88,7 +111,9 @@ export const useSkillsStyle = () => {
     list,
     row,
     item,
+    itemHovered,
     label,
-    isMobile, // Export this so component can use it
+    labelHovered,
+    isMobile,
   };
 };

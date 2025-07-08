@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FlatList, ScrollView, Text, View } from "react-native";
 import { useSkillsStyle } from "./skills.style";
 
@@ -30,18 +30,36 @@ const skills: Skill[] = [
 
 export default function WebSkillsComponent() {
   const styles = useSkillsStyle();
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const renderItem = ({ item }: { item: Skill }) => (
-    <View style={styles.item}>
+    <View
+      style={[styles.item, hoveredItem === item.id && styles.itemHovered]}
+      onPointerMove={() => setHoveredItem(item.id)}
+      onPointerLeave={() => setHoveredItem(null)}
+    >
       <item.Icon size={28} />
-      <Text style={styles.label}>{item.name}</Text>
+      <Text
+        style={[styles.label, hoveredItem === item.id && styles.labelHovered]}
+      >
+        {item.name}
+      </Text>
     </View>
   );
 
   const renderSkillItem = (skill: Skill) => (
-    <View key={skill.id} style={styles.item}>
+    <View
+      key={skill.id}
+      style={[styles.item, hoveredItem === skill.id && styles.itemHovered]}
+      onPointerMove={() => setHoveredItem(skill.id)}
+      onPointerLeave={() => setHoveredItem(null)}
+    >
       <skill.Icon size={28} />
-      <Text style={styles.label}>{skill.name}</Text>
+      <Text
+        style={[styles.label, hoveredItem === skill.id && styles.labelHovered]}
+      >
+        {skill.name}
+      </Text>
     </View>
   );
 
