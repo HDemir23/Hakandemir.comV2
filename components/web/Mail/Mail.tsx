@@ -1,13 +1,12 @@
-import React, { useCallback, useState, useMemo } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
-  Button,
-  TextInput,
-  View,
-  Text,
-  TouchableOpacity,
   Platform,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { useMailStyle } from "./mail.style";
 

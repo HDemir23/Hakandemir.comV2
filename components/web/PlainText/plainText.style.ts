@@ -8,9 +8,9 @@ export const usePlainText = () => {
 
   // Responsive breakpoints - webLayout.style.ts ile uyumlu
   const isMobile = width < 524;
-  const isMedium = width >= 524;
+  //  const isMedium = width >= 524;
   const isTablet = width >= 768 && width < 1024;
-  const isDesktop = width >= 1024;
+  // const isDesktop = width >= 1024;
 
   const container: ViewStyle = useMemo(
     () => ({

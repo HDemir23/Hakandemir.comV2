@@ -8,7 +8,7 @@ export const useSkillsStyle = () => {
 
   const isMobile = width < 768;
   const isTablet = width >= 768 && width < 1024;
-  const isDesktop = width >= 1024;
+  // const isDesktop = width >= 1024;
 
   const container: ViewStyle = useMemo(
     () => ({
@@ -16,7 +16,7 @@ export const useSkillsStyle = () => {
       width: "100%",
       backgroundColor: "transparent",
     }),
-    [theme]
+    []
   );
 
   const title: TextStyle = useMemo(
@@ -36,7 +36,7 @@ export const useSkillsStyle = () => {
       gap: 12,
       justifyContent: "space-between",
     }),
-    [theme]
+    []
   );
 
   const list: ViewStyle = useMemo(
@@ -44,7 +44,7 @@ export const useSkillsStyle = () => {
       flexDirection: "row",
       gap: 12,
     }),
-    [theme]
+    []
   );
 
   const row: ViewStyle = useMemo(
@@ -52,7 +52,7 @@ export const useSkillsStyle = () => {
       gap: 12,
       justifyContent: "space-between",
     }),
-    [theme]
+    []
   );
 
   const item: ViewStyle = useMemo(

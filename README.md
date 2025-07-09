@@ -1,50 +1,95 @@
-# Welcome to your Expo app 👋
+# hakandemir
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform portfolio app for Ahmet Hakan Demir, built with [Expo](https://expo.dev), React Native, and TypeScript. The app showcases personal information, experience, skills, and contact details, and is optimized for both web and native (iOS/Android) platforms.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **About Me**: Introduction and personal background.
+- **Experience**: Professional experience and projects.
+- **Skills**: Visual display of technical skills.
+- **Contact**: Quick access to email, phone, GitHub, and LinkedIn.
+- **Responsive Design**: Custom layouts for web and native platforms.
+- **Modern UI**: Themed components, custom backgrounds, and smooth navigation.
+
+## Screenshots
+
+_(Add screenshots of the app running on web and mobile here)_
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- [Git](https://git-scm.com/)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/HDemir23/hakandemir.git
+   cd hakandemir
+   ```
+
+2. **Install dependencies:**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Start the development server:**
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Run on your device:**
+   - For web: Press `w` in the Expo CLI or visit the local URL.
+   - For iOS: Press `i` (requires Xcode/simulator).
+   - For Android: Press `a` (requires Android Studio/emulator).
+   - Or scan the QR code with Expo Go.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+hakandemir/
+  app/            # App entry points and routing
+  components/     # Reusable UI components (native & web)
+  assets/         # Images, fonts, SVGs
+  constants/      # Theme and style constants
+  FirebaseConfig.ts # Firebase setup (if used)
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- **Web and Native Separation:**
 
-## Learn more
+  - `components/web/` for web-specific UI
+  - `components/native/` for native-specific UI
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Routing:**  
+  Uses [expo-router](https://expo.github.io/router/docs) for file-based navigation.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Customization
 
-## Join the community
+- **Theme:**  
+  Edit `constants/theme.ts` to adjust colors and styles.
 
-Join our community of developers creating universal apps.
+- **Profile Info:**  
+  Update images in `assets/images/` and text in the relevant components.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Contact Links:**  
+  Update contact details in `components/web/ContactIcons/Contact.tsx` and `components/native/ContactIcons/Contact.tsx`.
+
+## Scripts
+
+- `npm start` – Start Expo development server
+- `npm run reset-project` – Reset to a fresh project state
+- `npm run android` – Run on Android emulator/device
+- `npm run ios` – Run on iOS simulator/device
+- `npm run web` – Run on web
+- `npm run lint` – Lint the codebase
+
+## License
+
+This project is licensed under the MIT License.  
+Copyright (c) 2025 Ahmet Hakan Demir

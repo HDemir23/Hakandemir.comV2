@@ -88,10 +88,8 @@ const Mail: React.FC = () => {
         );
       }
     } catch (error) {
-      showAlert(
-        "Network Errorı",
-        "Can't reach server Please try again"
-      );
+      showAlert("Network Errorı", "Can't reach server Please try again");
+      console.log(error);
     } finally {
       setLoading(false);
     }

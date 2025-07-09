@@ -10,7 +10,7 @@ export const useContactStyle = () => {
       padding: 16,
       gap: 12,
     }),
-    [theme]
+    []
   );
 
   const contactItem: ViewStyle = useMemo(

@@ -28,7 +28,7 @@ export const useSkillsStyle = () => {
       flexDirection: "row",
       gap: 12,
     }),
-    [theme]
+    []
   );
 
   const row: ViewStyle = useMemo(
@@ -36,7 +36,7 @@ export const useSkillsStyle = () => {
       gap: 12,
       justifyContent: "space-between",
     }),
-    [theme]
+    []
   );
 
   const item: ViewStyle = useMemo(

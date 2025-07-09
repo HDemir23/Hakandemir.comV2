@@ -15,14 +15,14 @@ export const usePlainText = () => {
       marginLeft: 20,
       marginRight: 20,
     }),
-    [theme]
+    []
   );
 
   const content: ViewStyle = useMemo(
     () => ({
       width: "90%",
     }),
-    [theme]
+    []
   );
 
   const textContainer: ViewStyle = useMemo(
@@ -53,7 +53,7 @@ export const usePlainText = () => {
     [theme]
   );
 
-  const adsa: ViewStyle = useMemo(() => ({}), [theme]);
+
   return {
     container,
     content,

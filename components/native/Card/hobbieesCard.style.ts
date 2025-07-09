@@ -38,7 +38,7 @@ export const useHobbiesCardStyle = () => {
       borderRadius: 8,
       marginBottom: 12,
     }),
-    [theme]
+    []
   );
 
   const title: TextStyle = useMemo(

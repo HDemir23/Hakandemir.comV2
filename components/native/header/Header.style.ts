@@ -10,14 +10,14 @@ export const useHeaderStyle = () => {
       borderRadius: 45,
       paddingBottom: 25,
     }),
-    [theme]
+    []
   );
   const content: ViewStyle = useMemo(
     () => ({
       flexDirection: "row",
       alignItems: "center",
     }),
-    [theme]
+    []
   );
 
   const Image: ViewStyle = useMemo(
@@ -51,7 +51,7 @@ export const useHeaderStyle = () => {
     [theme]
   );
 
-  const adsa: ViewStyle = useMemo(() => ({}), [theme]);
+
   return {
     container,
     content,

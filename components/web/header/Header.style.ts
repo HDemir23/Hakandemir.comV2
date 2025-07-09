@@ -9,18 +9,18 @@ import {
 
 export const useHeaderStyle = () => {
   const theme = GitHubDarkTheme;
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   const isMobile = width >= 320 && width <= 768;
-  const isLarge = width >= 768;
-  const isTablet = width >= 768 && width < 1024;
-  const isDesktop = width >= 1024;
+  // const isLarge = width >= 768;
+  // const isTablet = width >= 768 && width < 1024;
+  // const isDesktop = width >= 1024;
 
   const container: ViewStyle = useMemo(
     () => ({
       paddingBottom: 25,
     }),
-    [theme]
+    []
   );
 
   const content: ViewStyle = useMemo(
@@ -29,7 +29,7 @@ export const useHeaderStyle = () => {
       alignItems: "center",
       justifyContent: "space-evenly",
     }),
-    [theme]
+    []
   );
 
   const image: ImageStyle = useMemo(

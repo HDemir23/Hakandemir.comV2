@@ -9,7 +9,7 @@ import {
 
 export const useHobbiesCardStyle = () => {
   const theme = GitHubDarkTheme;
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   // Responsive breakpoints - webLayout.style.ts ile uyumlu
   const breakpoints = useMemo(
