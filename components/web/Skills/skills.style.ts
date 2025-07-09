@@ -25,6 +25,7 @@ export const useSkillsStyle = () => {
       fontSize: 20,
       fontWeight: "bold",
       marginBottom: 16,
+
     }),
     [theme]
   );

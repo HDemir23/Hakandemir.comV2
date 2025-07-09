@@ -62,6 +62,7 @@ export const useHobbiesCardStyle = () => {
       fontSize: 20,
       fontWeight: "bold",
       marginBottom: 16,
+      marginLeft: 15,
     }),
     [theme]
   );

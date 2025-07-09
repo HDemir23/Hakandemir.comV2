@@ -112,7 +112,7 @@ const Contact = React.memo(() => {
   }, []);
 
   const openLinkedIn = useCallback(() => {
-    Linking.openURL("https://www.linkedin.com/in/hakandemir23").catch((err) =>
+    Linking.openURL("https://www.linkedin.com/in/realhdemir/").catch((err) =>
       console.error("Failed to open LinkedIn:", err)
     );
   }, []);

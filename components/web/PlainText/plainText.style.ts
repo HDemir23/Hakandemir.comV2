@@ -36,6 +36,7 @@ export const usePlainText = () => {
       fontSize: 20,
       fontWeight: "bold",
       marginBottom: 16,
+      marginLeft: 5,
     }),
     [theme]
   );
