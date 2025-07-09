@@ -1,5 +1,4 @@
 // Import the functions you need from the SDKs you need
-import Constants from "expo-constants";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -8,13 +7,13 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: Constants.expoConfig?.extra?.FIREBASE_API_KEY,
-  authDomain: Constants.expoConfig?.extra?.FIREBASE_AUTH_DOMAIN,
-  projectId: Constants.expoConfig?.extra?.FIREBASE_PROJECT_ID,
-  storageBucket: Constants.expoConfig?.extra?.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: Constants.expoConfig?.extra?.FIREBASE_MESSAGING_SENDER_ID,
-  appId: Constants.expoConfig?.extra?.FIREBASE_APP_ID,
-  measurementId: Constants.expoConfig?.extra?.FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyA0PSqbKEfS0QN7fgZFkhybNJGNIF1IxMg",
+  authDomain: "hakandemir-6f0bc.firebaseapp.com",
+  projectId: "hakandemir-6f0bc",
+  storageBucket: "hakandemir-6f0bc.firebasestorage.app",
+  messagingSenderId: "483912206656",
+  appId: "1:483912206656:web:30572b6e8cc41b68a1d2a5",
+  measurementId: "G-MD3JGNQCFN",
 };
 
 // Initialize Firebase

@@ -1,4 +1,3 @@
-import { db } from "@/FirebaseConfig";
 import { router } from "expo-router";
 import { collection, getDocs } from "firebase/firestore";
 import React, { useCallback, useEffect, useState } from "react";
@@ -11,6 +10,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { db } from "../../../FirebaseConfig";
 import { useHobbiesCardStyle } from "./hobbieesCard.style";
 
 type Hobby = {

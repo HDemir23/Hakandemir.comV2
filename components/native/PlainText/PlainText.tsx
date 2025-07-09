@@ -1,7 +1,7 @@
-import { db } from "@/FirebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
 import React, { useCallback, useEffect, useState } from "react";
 import { Text, View } from "react-native";
+import { db } from "../../../FirebaseConfig";
 import { usePlainText } from "./plainText.style";
 
 type plainTextProps = {
