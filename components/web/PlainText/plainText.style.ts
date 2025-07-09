@@ -12,13 +12,6 @@ export const usePlainText = () => {
   const isTablet = width >= 768 && width < 1024;
   // const isDesktop = width >= 1024;
 
-  const WievStyle: ViewStyle = useMemo(
-    () => ({
-      backgroundColor: GitHubDarkTheme.colors.background,
-      flex: 1,
-    }),
-    [GitHubDarkTheme]
-  );
   const container: ViewStyle = useMemo(
     () => ({
       flex: 1,
@@ -84,6 +77,5 @@ export const usePlainText = () => {
     textContainer,
     text,
     title,
-    WievStyle,
   };
 };

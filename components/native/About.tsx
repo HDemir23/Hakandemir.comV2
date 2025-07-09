@@ -1,13 +1,13 @@
-import { WievStyle } from "@/constants/theme";
 import React from "react";
 import { ScrollView, View } from "react-native";
 import MyHeader from "../native/header/MyHeader";
 import HobbiesCard from "./Card/HobbiesCard";
 import PlainText from "./PlainText/PlainText";
-
+import { usePlainText } from "./PlainText/plainText.style";
 export default function NativeAbout() {
+  const styles = usePlainText();
   return (
-    <View style={WievStyle}>
+    <View style={styles.WievStyle}>
       <ScrollView>
         <MyHeader />
 

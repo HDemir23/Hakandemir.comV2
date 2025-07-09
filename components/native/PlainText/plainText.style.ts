@@ -17,6 +17,13 @@ export const usePlainText = () => {
     }),
     []
   );
+  const WievStyle: ViewStyle = useMemo(
+    () => ({
+      backgroundColor: theme.colors.background,
+      flex: 1,
+    }),
+    [theme]
+  );
 
   const content: ViewStyle = useMemo(
     () => ({
@@ -59,5 +66,6 @@ export const usePlainText = () => {
     content,
     text,
     textContainer,
+    WievStyle,
   };
 };
