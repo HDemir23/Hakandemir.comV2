@@ -46,10 +46,4 @@ export const GitHubDarkTheme = {
   },
 };
 
-export const WievStyle: ViewStyle = useMemo(
-  () => ({
-    backgroundColor: GitHubDarkTheme.colors.background,
-    flex: 1,
-  }),
-  [GitHubDarkTheme]
-);
+
