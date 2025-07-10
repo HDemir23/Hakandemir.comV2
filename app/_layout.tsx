@@ -3,6 +3,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Stack } from "expo-router";
 import { Tabs } from "expo-router/tabs";
 import { Platform } from "react-native";
+import WebAnalytics from "./WebAnalytics";
 
 export default function RootLayout() {
   const style = GitHubDarkTheme;
@@ -56,5 +57,10 @@ export default function RootLayout() {
     );
   }
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <>
+      <Stack screenOptions={{ headerShown: false }} />
+      <WebAnalytics />
+    </>
+  );
 }
