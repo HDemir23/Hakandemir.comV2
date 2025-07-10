@@ -19,7 +19,7 @@ export default function NativeExperience() {
           document="Intro-Skills"
           prefix="aboutMe"
         />
-        <HobbiesCard content="hobies" />
+        <HobbiesCard content="projects" />
       </ScrollView>
     </View>
   );

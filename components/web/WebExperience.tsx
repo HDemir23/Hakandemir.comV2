@@ -16,7 +16,7 @@ export default function WebExperience() {
         prefix="aboutMe"
       />
       <Divider />
-      <HobbiesCard title="Projects" content="hobies" />
+      <HobbiesCard title="Projects" content="projects" />
     </View>
   );
 }
