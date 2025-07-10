@@ -44,6 +44,8 @@
       "eas": {
         "projectId": "65348442-31d1-4abb-9915-01afc5ee1bda"
       }
-    }
-  }
+    },
+    "sdkVersion": "53.0.0"
+  },
+  "name": "hakandemir"
 }
