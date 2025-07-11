@@ -10,7 +10,7 @@ export default function WebContact() {
     "https://docs.google.com/document/d/1ZKeHLH1XcS_kLFjsHAbqszWEeG7JD39OpQYDPyO1his/export?format=pdf";
 
   const mobileApp =
-    "https://expo.dev/accounts/roseprince/projects/hakandemir/builds/3568a9cf-d7f7-4f9c-ae30-719b90c4da8f";
+    "https://expo.dev/accounts/roseprince/projects/hakandemir/builds/796394af-72c9-41da-a4ac-85ef83282f83#:~:text=APK-,Install,-Open%20with%20Orbit";
   return (
     <View>
       <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>

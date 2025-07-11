@@ -15,7 +15,7 @@ export default function MyWebHeader({ activeContent }: MyWebHeaderProps) {
   const imageSource = useMemo(() => {
     const imageMap = {
       home: require("@/assets/images/photo.png"),
-      experience: require("@/assets/images/photo2.png"),
+      experience: require("@/assets/images/photo.png"),
       projects: require("@/assets/images/photo.png"),
     };
     return imageMap[activeContent];
